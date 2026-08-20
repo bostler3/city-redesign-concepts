@@ -1,0 +1,22 @@
+/* ================================
+   LAYOUT SYSTEM
+   ================================ */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.section {
+  padding: var(--space-7) 0;
+}
+
+.section-light {
+  background: var(--neutral-100);
+}
+
+.section-dark {
+  background: var(--color-primary);
+  color: var(--neutral-100);
+}

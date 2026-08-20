@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perry, Utah</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/utilities.css" />
+    <link rel="stylesheet" href="assets/css/concept-c.css" />
+    <!-- Google Font: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Paprika&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JS Files -->
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <header class="c-header">
+      <div class="c-header-logo">
+        <a href="../index.html" class="logo">
+          <img src="../assets/img/logo_with_peach.webp" alt="City logo" />
+        </a>
+      </div>
+
+      <nav class="c-nav" aria-label="Main navigation">
+        <ul class="c-nav-ul">
+          <li class="has-dropdown">
+            <button
+              class="c-nav-link"
+              aria-expanded="false"
+              aria-controls="services-menu"
+            >
+              Services <span class="downward-chevron">›</span>
+            </button>
+            <ul class="dropdown" id="services-menu">
+              <li><a href="#">Building Permit</a></li>
+              <li><a href="#">Business License</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <button
+              class="c-nav-link"
+              aria-expanded="false"
+              aria-controls="dept-menu"
+            >
+              Departments <span class="downward-chevron">›</span>
+            </button>
+            <ul class="dropdown" id="dept-menu">
+              <li><a href="#">Public Works</a></li>
+              <li><a href="#">Parks & Recreation</a></li>
+              <li><a href="#">Finance</a></li>
+              <li><a href="#">Planning & Zoning</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <button
+              class="c-nav-link"
+              aria-expanded="false"
+              aria-controls="about-menu"
+            >
+              About <span class="downward-chevron">›</span>
+            </button>
+            <ul class="dropdown" id="about-menu">
+              <li><a href="#">History</a></li>
+              <li><a href="#">Mayor</a></li>
+              <li><a href="#">City Council</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="c-nav-link" href="../pages/contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero-banner" aria-label="Perry City hero banner">
+        <div class="hero-banner-copy">
+          <h2 class="hero-banner-text">PERRY, UTAH</h2>
+          <p class="hero-subtitle">
+            What are you looking for today?
+            <span class="chat-cta-c">
+              <button class="chat-button-c" type="button">Let's Chat!</button>
+            </span>
+          </p>
+        </div>
+
+        <div class="chat-panel chat-panel--concept-c" hidden>
+          <div class="chat-panel__inner">
+            <button
+              class="chat-close chat-close--concept-c"
+              type="button"
+              aria-label="Close chat"
+            >
+              ×
+            </button>
+            <div class="chat-panel__messages" aria-live="polite">
+              <p class="chat-message bot">
+                🍑 Hi there! How can I help you today?
+              </p>
+            </div>
+            <form class="chat-form">
+              <div class="chat-input-wrap">
+                <textarea
+                  class="chat-input"
+                  rows="1"
+                  placeholder="Type your question..."
+                  aria-label="Chat input"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="chat-send"
+                  aria-label="Send message"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M12 21 V3 M5 11 L12 3 L19 11"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="section-band section-band--light calendar-band">
+        <h3 class="band-title">Calendar</h3>
+
+        <div class="calendar-cards">
+          <!-- Event 1 -->
+          <article class="calendar-card">
+            <div class="cal-header">
+              <span class="cal-day">Thur</span>
+              <span class="cal-date">27</span>
+            </div>
+            <h4 class="cal-title">City Council Meeting</h4>
+            <p class="cal-summary">
+              Regular session at City Hall. Budget update and development
+              proposal.
+            </p>
+            <a href="#" class="cal-link">View full details ›</a>
+          </article>
+
+          <!-- Event 2 -->
+          <article class="calendar-card">
+            <div class="cal-header">
+              <span class="cal-day">Thur</span>
+              <span class="cal-date">3</span>
+            </div>
+            <h4 class="cal-title">Planning Commission</h4>
+            <p class="cal-summary">
+              Development agreements, development agreements and more
+              development agreements.
+            </p>
+            <a href="#" class="cal-link">Learn more ›</a>
+          </article>
+
+          <!-- Event 3 -->
+          <article class="calendar-card">
+            <div class="cal-header">
+              <span class="cal-day">Sat</span>
+              <span class="cal-date">5</span>
+            </div>
+            <h4 class="cal-title">Utah Tech @ BYU Football</h4>
+            <p class="cal-summary">Enjoy some Cougar football!</p>
+            <a href="#" class="cal-link">View full details ›</a>
+          </article>
+
+          <!-- Event 4 -->
+          <article class="calendar-card">
+            <div class="cal-header">
+              <span class="cal-day">Mon</span>
+              <span class="cal-date">7</span>
+            </div>
+            <h4 class="cal-title">Labor Day</h4>
+            <p class="cal-summary">
+              City offices closed in observance of the holiday.
+            </p>
+            <a href="#" class="cal-link">Learn more ›</a>
+          </article>
+          <!-- Event 5 -->
+          <article class="calendar-card">
+            <div class="cal-header">
+              <span class="cal-day">Thur</span>
+              <span class="cal-date">10</span>
+            </div>
+            <h4 class="cal-title">City Council Meeting</h4>
+            <p class="cal-summary">How's the city website re-design going?</p>
+            <a href="#" class="cal-link">View full details ›</a>
+          </article>
+          <!-- Event 6 -->
+          <article class="calendar-card">
+            <div class="cal-header">
+              <span class="cal-day">Sat</span>
+              <span class="cal-date">12</span>
+            </div>
+            <h4 class="cal-title">Arizona @ BYU Football</h4>
+            <p class="cal-summary">Go Cougs!</p>
+            <a href="#" class="cal-link">Learn more ›</a>
+          </article>
+          <!-- Event 7 -->
+          <article class="calendar-card">
+            <div class="cal-header">
+              <span class="cal-day">Thur</span>
+              <span class="cal-date">24</span>
+            </div>
+            <h4 class="cal-title">City Council Meeting</h4>
+            <p class="cal-summary">
+              Review Planning Commission's proposed development agreement
+              priorities.
+            </p>
+            <a href="#" class="cal-link">View full details ›</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="news-band">
+        <div class="news-hero">
+          <img
+            src="../assets/img/news-hero.webp"
+            alt="Community gathering in Perry"
+          />
+        </div>
+
+        <div class="news-content">
+          <h3 class="news-title">News</h3>
+          <p class="news-intro">What’s happening around Perry City</p>
+
+          <div class="news-stories">
+            <article class="news-story">
+              <div class="news-meta">
+                <span class="news-date">Feb 12, 2026</span>
+                <span class="news-tag">Community</span>
+              </div>
+              <h4 class="news-story-title">Perry City and America250</h4>
+              <p class="news-story-blurb">
+                Perry City is proud to participate in the America250 initiative,
+                celebrating our nation’s upcoming semiquincentennial.
+              </p>
+              <a href="#" class="news-story-link">Read more ›</a>
+            </article>
+
+            <article class="news-story">
+              <div class="news-meta">
+                <span class="news-date">Feb 18, 2026</span>
+                <span class="news-tag">Public Safety</span>
+              </div>
+              <h4 class="news-story-title">New Dispatch Partner</h4>
+              <p class="news-story-blurb">
+                Perry City welcomes a new dispatch partner to improve response
+                times and coordination across the region.
+              </p>
+              <a href="#" class="news-story-link">Read more ›</a>
+            </article>
+
+            <article class="news-story">
+              <div class="news-meta">
+                <span class="news-date">Mar 3, 2026</span>
+                <span class="news-tag">Infrastructure</span>
+              </div>
+              <h4 class="news-story-title">Wastewater News</h4>
+              <p class="news-story-blurb">
+                Updates on wastewater improvements, long‑term planning, and how
+                Perry is investing in future infrastructure.
+              </p>
+              <a href="#" class="news-story-link">Read more ›</a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section-band section-band--light living-band">
+        <h3 class="living-title">Living Here</h3>
+        <p class="living-summary">
+          Daily life in Perry is shaped by safety, reliable services, and the
+          natural beauty of the Wasatch Front.
+        </p>
+
+        <div class="living-links">
+          <a href="#" class="living-link">Utilities & Billing</a>
+          <a href="#" class="living-link">Public Safety</a>
+          <a href="#" class="living-link">Parks & Recreation</a>
+          <a href="#" class="living-link">Property Maintenance</a>
+          <a href="#" class="living-link">City Services Directory</a>
+        </div>
+      </section>
+      <section class="community-band">
+        <div class="community-hero">
+          <img
+            src="../assets/img/community-hero.webp"
+            alt="Neighbors enjoying a community event"
+          />
+        </div>
+        <div class="community-content">
+          <h3 class="community-title">Community Life</h3>
+          <p class="community-summary">
+            Perry is a place where neighbors wave from their porches and
+            community events still feel like family gatherings.
+          </p>
+          <div class="community-links">
+            <a href="#" class="community-link">Community Events</a>
+            <a href="#" class="community-link">Parks & Trails</a>
+            <a href="#" class="community-link">Youth Programs</a>
+            <a href="#" class="community-link">Senior Services</a>
+            <a href="#" class="community-link">Volunteer Opportunities</a>
+          </div>
+        </div>
+      </section>
+      <section class="section-band section-band--light perfecting-band">
+        <h3 class="perfecting-title">Perfecting Perry</h3>
+        <p class="perfecting-summary">
+          Perry is planning thoughtfully for the future — supporting local
+          businesses, improving infrastructure, and guiding development with
+          care.
+        </p>
+        <div class="perfecting-links">
+          <a href="#" class="perfecting-link">Economic Development</a>
+          <a href="#" class="perfecting-link">Land Use & Planning</a>
+          <a href="#" class="perfecting-link">Infrastructure Projects</a>
+          <a href="#" class="perfecting-link">Long‑Term City Plans</a>
+          <a href="#" class="perfecting-link">Development Applications</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-c" aria-label="Footer">
+      <div class="footer-c__inner">
+        <div class="footer-c__identity">
+          <img
+            src="../assets/img/perry-peach-logo.png"
+            alt="Perry City logo"
+            class="footer-c__logo"
+          />
+
+          <h2 class="footer-c__title">Perry City</h2>
+
+          <p class="footer-c__address">
+            1950 South Highway 89, Perry, UT 84302 • (435) 723‑6461
+          </p>
+          <p class="footer-c__hours">
+            Monday–Thursday 7:00 AM–5:00 PM • Friday 9:00 AM–1:00 PM
+          </p>
+        </div>
+
+        <div class="footer-c__legal">
+          <p>© 2026 Perry, Utah</p>
+          <p>
+            <a href="#">Accessibility</a> •
+            <a href="#">Privacy</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

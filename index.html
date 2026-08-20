@@ -1,0 +1,257 @@
+<!-- Add any more splashes of color(s)? -->
+<!-- Re-visit incorporating peach orchard video on home page (behind chatbot or somehow else) with Copilot -->
+<!-- Ask Copilot about changing "Departments" to "Services"...just seems like Departments is useless -->
+<!-- Ask Copilot about using serif font for header (and anywhere else) -->
+<!-- Modal overlay approach used by Apple for calendar and news click events -->
+<!-- npx tsc --watch is the command to watch for TypeScript changes -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perry, Utah</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/utilities.css" />
+
+    <!-- Google Font: Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JS Files -->
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+    <script>
+      fetch("components/header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 class="hero-title">Welcome to Perry City</h1>
+        <p class="hero-subtitle">
+          The best freakin' place in the world without beaches <br />(but we got
+          peaches)!
+        </p>
+        <!-- Chat Panel -->
+        <div class="hero-chat-panel">
+          <!-- Collapsed preview -->
+          <div class="chat-panel-inner">
+            <p class="chat-panel-text">🍑 Hi! Whatcha' looking for today?</p>
+            <button class="btn chat-panel-btn" aria-label="Open chat panel">
+              Let's Chat!
+            </button>
+          </div>
+
+          <!-- Expanded chat -->
+          <div class="chat-expanded hidden" role="dialog">
+            <button class="chat-close-a" aria-label="Close chat">×</button>
+            <div class="chat-messages" aria-live="polite">
+              <p class="chat-message bot">
+                🍑 Hi there! What would you like to explore today?
+              </p>
+            </div>
+            <form class="chat-form">
+              <div class="chat-input-wrap">
+                <textarea
+                  id="chat-input"
+                  name="chat-input"
+                  class="chat-input"
+                  rows="1"
+                  placeholder="Type your question..."
+                  aria-label="Send message"
+                ></textarea>
+                <button
+                  type="submit"
+                  class="chat-send"
+                  aria-label="Send message"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      d="M12 21 V3 M5 11 L12 3 L19 11"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial-section">
+      <div class="editorial-grid">
+        <!-- Calendar Column -->
+        <div class="calendar-column">
+          <h2 class="section-title">Calendar</h2>
+
+          <div class="calendar-item">
+            <button
+              class="calendar-toggle"
+              aria-expanded="false"
+              aria-controls="event-1"
+              aria-label="Expand details for this event"
+            >
+              <span class="event-date">April 2</span>
+              <span class="event-title">Planning Commission Meeting</span>
+            </button>
+            <div class="calendar-details" id="event-1">
+              <p>
+                6:00 PM at City Hall. Agenda includes a work session and a
+                development proposal.
+              </p>
+              <a href="#" class="details-link">View full details ›</a>
+            </div>
+          </div>
+
+          <div class="calendar-item">
+            <button
+              class="calendar-toggle"
+              aria-expanded="false"
+              aria-controls="event-2"
+              aria-label="Expand details for this event"
+            >
+              <span class="event-date">Feb 16</span>
+              <span class="event-title">Presidents' Day</span>
+            </button>
+            <div class="calendar-details" id="event-2">
+              <p>City offices will be closed in observance of the holiday.</p>
+              <a href="#" class="details-link">Learn more ›</a>
+            </div>
+          </div>
+
+          <div class="calendar-item">
+            <button
+              class="calendar-toggle"
+              aria-expanded="false"
+              aria-controls="event-3"
+              aria-label="Expand details for this event"
+            >
+              <span class="event-date">May 14</span>
+              <span class="event-title">City Council Meeting</span>
+            </button>
+            <div class="calendar-details" id="event-3">
+              <p>Regular session with fiscal 2027 budget kickoff</p>
+              <a href="#" class="details-link">View full details ›</a>
+            </div>
+          </div>
+          <a href="conceptB.html" class="calendar-view-all"
+            >View full calendar ›</a
+          >
+        </div>
+
+        <!-- News Column -->
+        <div class="news-column">
+          <h2 class="section-title">News</h2>
+
+          <!-- Featured Story -->
+          <article class="featured-story">
+            <img
+              src="assets/img/featured-story-thumbnail.png"
+              alt="Featured story thumbnail"
+              class="featured-thumb"
+            />
+            <div class="featured-content">
+              <h3 class="featured-title">Perry City and America250</h3>
+              <p class="featured-blurb">
+                Perry City is proud to participate in the America250 initiative,
+                celebrating our nation’s upcoming semiquincentennial.
+              </p>
+              <a href="#" class="featured-link"
+                >Read more <span aria-hidden="true">›</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Additional News Items -->
+          <ul class="news-list">
+            <li>
+              <a href="#" class="news-item"
+                >New Dispatch Partner <span aria-hidden="true">›</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="news-item"
+                >Wastewater News <span aria-hidden="true">›</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- Identity section -->
+    <section class="identity">
+      <div class="identity__container">
+        <figure class="identity__image">
+          <img src="/assets/img/orchard.webp" alt="Perry orchard landscape" />
+        </figure>
+
+        <div class="identity__pillars">
+          <div class="identity__pillar">
+            <h3>Living Here</h3>
+            <p>
+              Life in Perry is grounded, friendly, and centered on a welcoming
+              small-city feel. Residents enjoy safe neighborhoods, reliable
+              services, and a pace that feels genuinely balanced and human.
+            </p>
+            <a href="/services">Learn about city services</a>
+          </div>
+          <div class="identity__pillar">
+            <h3>Community Life</h3>
+            <p>
+              Perry thrives on connection — from quiet orchard mornings to fun
+              community events. Our parks, trails, and shared spaces are where
+              neighbors become friends.
+            </p>
+            <a href="/community">Explore community programs</a>
+          </div>
+          <div class="identity__pillar">
+            <h3>Perfecting Perry</h3>
+            <p>
+              We’re building a future that honors our roots while welcoming
+              thoughtful growth. Whether it’s new businesses, land development,
+              infrastructure improvements, or long-term planning, progress here
+              is intentional.
+            </p>
+            <a href="/development">See development updates</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Header -->
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("components/footer.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
